@@ -16,13 +16,13 @@
       
       <link rel="shortcut icon" href="/favicon.ico" />
        
-<link rel="stylesheet" href="/dist/main.css">
+<link rel="stylesheet" href="/zero/dist/main.css">
 
       
-<link rel="stylesheet" href="/css/fonts/remixicon.css">
+<link rel="stylesheet" href="/zero/css/fonts/remixicon.css">
 
       
-<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/zero/css/custom.css">
  
       <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
        
@@ -49,14 +49,20 @@
 <body>
   <div id="app">
     
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
-    
-       
-</ul>
   
   
   <article class="articles">
@@ -73,19 +79,19 @@
   
   <div class="archives-wrap">
     <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
+      <a href="/zero/archives/2024" class="archive-year">2024</a>
     </div>
     <div class="archives">
       
       <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2024/08/07/%E2%80%9C%E6%9C%80%E5%88%9D%E7%9A%84%E6%96%87%E7%AB%A0%E2%80%9D/" class="archive-article-date">
+      <a href="/zero/2024/08/07/%E2%80%9C%E6%9C%80%E5%88%9D%E7%9A%84%E6%96%87%E7%AB%A0%E2%80%9D/" class="archive-article-date">
   <time datetime="2024-08-07T04:09:33.000Z" itemprop="datePublished">08/07</time>
 </a>
        
 <h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/07/%E2%80%9C%E6%9C%80%E5%88%9D%E7%9A%84%E6%96%87%E7%AB%A0%E2%80%9D/"
+  <a class="archive-article-title" href="/zero/2024/08/07/%E2%80%9C%E6%9C%80%E5%88%9D%E7%9A%84%E6%96%87%E7%AB%A0%E2%80%9D/"
     >“最初的文章”</a> 
 </h2>
  
@@ -161,30 +167,26 @@
       <button class="navbar-toggle"></button>
 <nav class="navbar">
   
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="泠"></a>
-  </div>
-  
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
+      <a class="nav-item-link" href="/zero/">主页</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
+      <a class="nav-item-link" href="/zero/archives">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
+      <a class="nav-item-link" href="/zero/categories">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
+      <a class="nav-item-link" href="/zero/tags">标签</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+      <a class="nav-item-link" href="/zero/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
@@ -192,10 +194,8 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
+      <a class="nav-item-link" href="/zero/friends">友链</a>
     </li>
-    
-    
     
   </ul>
 </nav>
@@ -208,7 +208,7 @@
       </a>
       
       
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+      <a class="nav-item-link" target="_blank" href="/zero/atom.xml" title="RSS Feed">
         <i class="ri-rss-line"></i>
       </a>
       
@@ -224,6 +224,29 @@
     </aside>
     <div id="mask"></div>
 
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/zero/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/zero/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/zero/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/zero/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
 
@@ -234,7 +257,7 @@
 />
 <script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 
-<script src="/dist/main.js"></script>
+<script src="/zero/dist/main.js"></script>
 
 <!-- ImageViewer -->
  <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -349,17 +372,21 @@
 
 <!-- busuanzi  -->
  
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+<script src="/zero/js/busuanzi-2.3.pure.min.js"></script>
  
 <!-- ClickLove -->
 
 <!-- ClickBoom1 -->
 
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+
+<script src="/zero/js/clickBoom1.js"></script>
+ 
 <!-- ClickBoom2 -->
 
 <!-- CodeCopy -->
  
-<link rel="stylesheet" href="/css/clipboard.css">
+<link rel="stylesheet" href="/zero/css/clipboard.css">
  <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
 <script>
   function wait(callback, seconds) {
@@ -416,7 +443,9 @@
 </script>
  
 <!-- CanvasBackground -->
-
+ 
+<script src="/zero/js/dz.js"></script>
+ 
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
